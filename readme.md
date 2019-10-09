@@ -4,9 +4,9 @@ Ayakha Auto Sales
 
 Ayakha is an upcoming car salesman in the northern suburbs of Cape Town. He wants to start a second hand car dealership and is doing some market research.
 
-He gave you [some data](/cars.json) that he wants some help with analyzing.
+He gave you [some data](/cars.json) that he wants help with analyzing.
 
-For a few towns he recorded the, model, color and make. As he needs to decide which models to sels and where to open his dealership.
+For a few towns he recorded the model, color and make of cars. He needs to decide which models of cars to sell and where to open his Auto (car) dealership.
 
 Each object in the list looks like this:
 
@@ -20,6 +20,8 @@ var car = {
 }
 
 ```
+
+Use your new found skills of Java Streams answer his questions.
 
 ## Cars can be from these towns
 

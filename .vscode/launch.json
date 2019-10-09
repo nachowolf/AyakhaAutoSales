@@ -1,0 +1,11 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - AyakhaAutoSales",
+			"request": "launch",
+			"mainClass": "ayakha.AyakhaAutoSales",
+			"projectName": "JUnitSpark"
+		}
+	]
+}

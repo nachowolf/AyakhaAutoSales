@@ -3,36 +3,41 @@ package ayakha;
 import java.util.List;
 
 public class AyakhaAutoSales {
+    
+    public static int carCountForTown(String town, List<Car> cars) {
+        return 0;
+    }
 
-    public static List<Car> mostPopularCarModel(List<Car> cars) {
+
+    public static String mostPopularCarModel(List<Car> cars) {
         return null;
     }
 
-    public static List<Car> howManyNissansFromMalmesbury(List<Car> cars) {
+    public static int howManyNissansFromMalmesbury(List<Car> cars) {
+        return 0;
+    }
+
+    public static String townWithMostBlueCars(List<Car> cars) {
         return null;
     }
 
-    public static List<Car> townWithMostBlueCars(List<Car> cars) {
+    public static String townWithFewestOrangeCars(List<Car> cars) {
         return null;
     }
 
-    public static List<Car> townWithFewestOrangeCars(List<Car> cars) {
+    public static String mostPopularModel(List<Car> cars) {
         return null;
     }
 
-    public static List<Car> mostPopularModel(List<Car> cars) {
+    public static String mostPopularModelFromStellenbosch(List<Car> cars) {
         return null;
     }
 
-    public static List<Car> mostPopularModelFromStellenbosch(List<Car> cars) {
+    public static String leastPopularModelCarInKuilsrivier(List<Car> cars) {
         return null;
     }
 
-    public static List<Car> leastPopularModelCarInKuilsrivier(List<Car> cars) {
-        return null;
-    }
-
-    public static List<Car> carsForTown(List<Car> cars) {
+    public static List<Car> carsForTown(String townName, List<Car> cars) {
         return null;
     }
     
@@ -40,12 +45,16 @@ public class AyakhaAutoSales {
         return null;
     }
 
-    public static List<Car> numberOfCarsPerModel(List<Car> cars) {
+    public static int numberOfCarsPerModel(String model, String color,  List<Car> cars) {
+        return 0;
+    }
+
+    public static int numberOfCarsPerModel(String model, String color, String town,  List<Car> cars) {
+        return 0;
+    }
+
+    public static String mostPopularColorForTown(String town, List<Car> cars) {
         return null;
     }
 
-    public static List<Car> mostPopularColorForTown(List<Car> cars) {
-        return null;
-    }
-    
 }
