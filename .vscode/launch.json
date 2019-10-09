@@ -2,6 +2,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "CodeLens (Launch) - AyakhaAutoSalesTest",
+			"request": "launch",
+			"mainClass": "ayakha.AyakhaAutoSalesTest",
+			"projectName": "JUnitSpark"
+		},
+		{
+			"type": "java",
 			"name": "CodeLens (Launch) - AyakhaAutoSales",
 			"request": "launch",
 			"mainClass": "ayakha.AyakhaAutoSales",
