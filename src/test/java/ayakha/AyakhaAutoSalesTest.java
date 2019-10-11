@@ -5,9 +5,12 @@ import java.io.FileReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import static ayakha.AyakhaAutoSales.mostPopularCarModel;
+import static ayakha.AyakhaAutoSales.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class AyakhaAutoSalesTest {
 
@@ -37,12 +40,76 @@ public class AyakhaAutoSalesTest {
         return cars;
     }
 
-	@org.junit.jupiter.api.Test
+	@Test
     public void shouldFindMostPopularCarModel() throws Exception {
 
-        System.out.println(carList().get(0));
-
-        assertEquals("", mostPopularCarModel(carList()));
+        assertEquals("Corolla", mostPopularCarModel(carList()));
     }
 
+    @Test
+    public void shouldReturnAmountOfCarsFromTown() throws Exception{
+        assertEquals(5, carCountForTown("Cape Town", carList()));
+    }
+
+    @Test
+    public void shouldReturnHowManyNissansFromMalmsbury() throws Exception{
+        assertEquals(1, howManyNissansFromMalmesbury(carList()));
+    }
+
+    @Test
+    public void shouldReturnTheTownWithTheMostBlueCars() throws Exception{
+        assertEquals("Stellenbosch", townWithMostBlueCars(carList()));
+    }
+
+    @Test
+    public void shouldReturnTownWithFewestOrangeCars() throws Exception{
+        assertEquals("Paarl", townWithFewestOrangeCars(carList()));
+    }
+
+    @Test
+    public void shouldReturnMostPopularCarModel() throws Exception{
+        assertEquals("Corolla", mostPopularModel(carList()));
+    }
+
+    @Test
+    public void shouldReturnMostPopularModelFromStellbosch() throws Exception{
+        assertEquals("Fiesta", mostPopularModelFromStellenbosch(carList()));
+    }
+
+    @Test
+    public void shouldReturnLeastPopularCarModelInKuilsrivier() throws Exception{
+        assertEquals("Ranger", leastPopularModelCarInKuilsrivier(carList()));
+    }
+
+    @Test
+    public void shouldReturnAListOfCarsFromASpecifiedTown() throws Exception{
+
+        assertEquals(Arrays.asList(
+                new Car("white", "Nissan", "Micra", "CJ 16103"),
+                new Car("white", "Toyota", "Hilux", "CJ 16455"),
+                new Car("orange", "Ford", "Fiesta", "CJ 67577")), carsForTown("Paarl", carList()));
+    }
+
+    @Test
+    public void shouldReturnAListOfCarsWithASpecifiedColorAndFromASpecifiedTown() throws Exception{
+        assertEquals(Arrays.asList(), numberOfCars("red", "Malmesbury", carList()));
+        assertEquals(Arrays.asList(
+                new Car("blue", "Volkswagen", "Jetta", "CA 46977"),
+                new Car("blue", "Ford", "Ranger", "CA 77852")), numberOfCars("blue", "Cape Town", carList()));
+    }
+
+    @Test
+    public void shouldReturnTheNumberOfVehiclesThatFitTheSpecifiedModelAndColor() throws Exception{
+        assertEquals(0, numberOfCarsPerModel("Ranger", "green", carList()));
+    }
+
+    @Test
+    public void shouldReturnTheNumberOfVehiclesThatFitTheSpecifiedModelAndColorAndTown() throws Exception{
+        assertEquals(0, numberOfCarsPerModel("Tazz", "white", "Cape Town",carList()));
+    }
+
+    @Test
+    public void shouldReturnMostCommonCarColorInSpecifiedTown() throws Exception{
+        assertEquals("orange", mostPopularColorForTown("Bellville", carList()));
+    }
 }
